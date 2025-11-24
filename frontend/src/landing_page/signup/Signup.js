@@ -6,11 +6,9 @@ import StepsSection from "./StepsSection";
 import BenefitsSection from "./BenefitsSection";
 import AccountTypes from "./AccountTypes";
 import FAQSection from "./FAQSection";
-import OpenAccount from '../OpenAccount'; 
+import OpenAccount from "../OpenAccount"; 
 
-
-function Signup() {
-
+function SignupPage() {
   const [openFAQ, setOpenFAQ] = useState(null);
 
   return (
@@ -26,4 +24,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default SignupPage;
