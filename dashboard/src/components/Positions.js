@@ -1,8 +1,20 @@
-import React from "react";
-
-import { positions } from "../data/data";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const Positions = () => {
+  const [positions, setPositions] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://zerodha-clone-3-03lv.onrender.com/allPositions")
+      .then((res) => {
+        setPositions(res.data);
+      })
+      .catch((err) => {
+        console.error("Error fetching positions:", err);
+      });
+  }, []);
+
   return (
     <>
       <h3 className="title">Positions ({positions.length})</h3>
